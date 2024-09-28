@@ -28,14 +28,12 @@ public class Journal
 
     public void SaveToFile(string file)
     {
-        // Configure JsonSerializer to include public fields
         var options = new JsonSerializerOptions
         {
             WriteIndented = true,
-            IncludeFields = true // This enables field serialization
+            IncludeFields = true
         };
 
-        // Serialize the entries to JSON
         string json = JsonSerializer.Serialize(_entries, options);
         File.WriteAllText(file, json);
         Console.WriteLine("Entries saved to file successfully!\n");
@@ -47,7 +45,7 @@ public class Journal
         {
             var options = new JsonSerializerOptions
             {
-                IncludeFields = true // This enables field deserialization
+                IncludeFields = true
             };
 
             string json = File.ReadAllText(file);
