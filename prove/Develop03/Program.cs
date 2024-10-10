@@ -11,15 +11,16 @@ class Program
         Reference refer = new Reference("Proverbs", 3, 5, 6);
         Scripture scripture = new Scripture(refer, "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.");
 
+        Console.WriteLine("Welcome to the scripture memorization program!");
+        Console.WriteLine();
+        Console.WriteLine("Please enter the number of words you would like to hide on each attempt:");
+
+        int numWords = Convert.ToInt32(Console.ReadLine());
+
         while (!scripture.IsCompletelyHidden())
         {
             Console.WriteLine(scripture.GetDisplayText());
             Console.WriteLine();
-            Console.WriteLine("Welcome to the scripture memorization program!");
-            Console.WriteLine();
-            Console.WriteLine("Please enter the number of words you would like to hide on each attempt:");
-
-            int numWords = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Press enter to continue or type 'quit' to exit...");
 
