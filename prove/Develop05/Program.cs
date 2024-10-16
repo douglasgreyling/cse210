@@ -1,3 +1,6 @@
+// I exceeded the requirements for this assignment by making the reflecting activity
+// ask the prompts in a random order. It will allow the user to reflect, and then end (or repeat) if time allows.
+
 using System;
 
 class Program
