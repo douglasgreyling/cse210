@@ -1,27 +1,14 @@
+// I exceeded the requirements of this program by making the goal manager automatically load
+// goals from a file when it first starts. I also made it save the goals before the program exits.
+// When the user manually tries to save/load goals, then they will be prompted for a filename.
+
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Square s = new Square("red", 5);
-        Console.WriteLine("Square Area: " + s.GetArea());
-        Console.WriteLine("Square Color: " + s.GetColor());
-
-        Rectangle r = new Rectangle("blue", 5, 10);
-        Console.WriteLine("Rectangle Area: " + r.GetArea());
-        Console.WriteLine("Rectangle Color: " + r.GetColor());
-
-        Circle c = new Circle("green", 5);
-        Console.WriteLine("Circle Area: " + c.GetArea());
-        Console.WriteLine("Circle Color: " + c.GetColor());
-
-        var shapes = new Shape[] { s, r, c };
-
-        foreach (var shape in shapes)
-        {
-            Console.WriteLine("Area: " + shape.GetArea());
-            Console.WriteLine("Color: " + shape.GetColor());
-        }
+        GoalManager goalManager = new GoalManager();
+        goalManager.Start();
     }
 }

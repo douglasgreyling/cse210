@@ -9,15 +9,18 @@ class Shape
         _color = color;
     }
 
-    public string GetColor() {
+    public string GetColor()
+    {
         return _color;
     }
 
-    public void SetColor(string color) {
+    public void SetColor(string color)
+    {
         _color = color;
     }
 
-    public virtual double GetArea() {
+    public virtual double GetArea()
+    {
         return 0;
     }
 }
